@@ -1,0 +1,29 @@
+{
+  "name": "bright-ideas",
+  "version": "1.0.0",
+  "description": "Digital Bright Ideas Notebook",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all --parallel dev:server",
+    "dev:server": "webpack-dev-server --hot --inline",
+    "watch": "webpack -w -d",
+    "build": "webpack -p"
+  },
+  "author": "Sophie Wong",
+  "license": "The Unlicense",
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^2.1.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.0.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {}
+}
