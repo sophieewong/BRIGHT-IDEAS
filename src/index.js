@@ -1,1 +1,1 @@
-import flag from './js/components/flag';
+import flags from './js/flags';
