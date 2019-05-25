@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "npm-run-all --parallel dev:server",
-    "dev:server": "webpack-dev-server --hot --inline",
+    "dev:server": "webpack-dev-server --hot --inline --config webpack.dev.js",
     "watch": "webpack -w -d",
-    "build": "webpack -p"
+    "build": "webpack --config webpack.prod.js"
   },
   "author": "Sophie Wong",
   "license": "The Unlicense",
