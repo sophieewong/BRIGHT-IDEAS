@@ -1,0 +1,33 @@
+body {
+    background-color: $dark-bg;
+}
+
+h1, h2, h3, h4, h5, h6, p, li, ul {
+    color: $white;
+}
+
+#page-dashboard-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 16rem;
+    text-align: center;
+
+    svg {
+        margin: 0 auto;
+    }
+}
+
+#page-dashboard-flags {
+    margin: 0 5rem;
+
+    //add in media query for tablet view & above to change view into 2 columns
+}
+
+.page-dashboard-flag {
+    height: 1rem;
+
+    h2 {
+        vertical-align: top;
+    }
+}

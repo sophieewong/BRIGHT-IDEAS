@@ -6,7 +6,8 @@ class Flag {
     render() {
         const flagDiv = document.createElement('div');
         flagDiv.classList = 'page-dashboard-flag';
-        flagDiv.style.backgroundColor = this.data.colour;
+        // flagDiv.style.backgroundColor = this.data.colour;
+        // flagDiv.style.borderBottom = 2rem solid this.data.colour; <- is this correct?
 
         const flagTitle = document.createElement('h2');
         flagTitle.innerText = this.data.name;
