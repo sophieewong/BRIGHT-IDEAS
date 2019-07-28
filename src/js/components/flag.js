@@ -6,8 +6,12 @@ class Flag {
     render() {
         const flagDiv = document.createElement('div');
         flagDiv.classList = 'page-dashboard-flag';
-        // flagDiv.style.backgroundColor = this.data.colour;
-        // flagDiv.style.borderBottom = 2rem solid this.data.colour; <- is this correct?
+        flagDiv.style.backgroundImage = `linear-gradient(to top, ${this.data.colour} 50%, transparent 50%)`;
+        console.log(`linear-gradient(to top, ${this.data.colour} 50%, transparent 50%);`);
+        // flagDiv.style.borderBottom = 2rem solid this.data.colour; <- is this correct? 
+        // flagDiv.style. <- to hover
+
+        flagDiv.style.borderBottom = `10px solid ${this.data.colour}`;
 
         const flagTitle = document.createElement('h2');
         flagTitle.innerText = this.data.name;
@@ -15,13 +19,13 @@ class Flag {
 
         flagDiv.appendChild(flagTitle);
 
-        document.getElementById('page-dashboard-flags').appendChild(flagDiv);
-
         flagDiv.onclick = () => {
             this.data.notes.forEach(note => {
                 console.log(note);
             })
         };
+
+        return flagDiv;
     }
 }
 

@@ -133,6 +133,14 @@ Store the flags container
 For each flag object in the flags array, append a div to the previously stored flags container
 */
 
-flags.forEach(flag => {
-    flag.render();
+const colOne = document.getElementById('page-dashboard-flags-col-1');
+const colTwo = document.getElementById('page-dashboard-flags-col-2');
+
+flags.forEach((flag, index) => {
+    if (index % 2 === 0) {
+        colOne.appendChild(flag.render());
+    }
+    else {
+        colTwo.appendChild(flag.render());
+    }
 });

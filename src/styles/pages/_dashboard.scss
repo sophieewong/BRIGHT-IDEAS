@@ -20,14 +20,24 @@ h1, h2, h3, h4, h5, h6, p, li, ul {
 
 #page-dashboard-flags {
     margin: 0 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
 
     //add in media query for tablet view & above to change view into 2 columns
 }
 
 .page-dashboard-flag {
-    height: 1rem;
+    background-size: 200% 200%;
+    transition: background-position 300ms ease;
+    cursor: pointer;
 
     h2 {
-        vertical-align: top;
+        margin-bottom: -6px;
+        margin-right: 0;
+    }
+
+    &:hover {
+        background-position: 0 100%;
     }
 }
