@@ -1,9 +1,17 @@
 body {
     background-color: $dark-bg;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
 }
 
 h1, h2, h3, h4, h5, h6, p, li, ul {
     color: $white;
+}
+
+#page-dashboard {
+    max-width: 53rem;
+    margin: 0 auto;
 }
 
 #page-dashboard-header {
@@ -15,6 +23,12 @@ h1, h2, h3, h4, h5, h6, p, li, ul {
 
     svg {
         margin: 0 auto;
+        width: 300px;
+        height: 170px;
+    }
+
+    h1 {
+        font-size: 1em;
     }
 }
 
@@ -22,7 +36,11 @@ h1, h2, h3, h4, h5, h6, p, li, ul {
     margin: 0 5rem;
     display: flex;
     justify-content: space-between;
-    align-items: left;
+    flex-wrap: wrap;
+
+    @media (max-width: 800px) {
+        margin-bottom: 2rem;
+    }
 
     //add in media query for tablet view & above to change view into 2 columns
 }
@@ -31,13 +49,33 @@ h1, h2, h3, h4, h5, h6, p, li, ul {
     background-size: 200% 200%;
     transition: background-position 300ms ease;
     cursor: pointer;
+    width: 100%;
+    margin: 1rem;
 
     h2 {
         margin-bottom: -6px;
-        margin-right: 0;
+        margin-right: 0.25rem;
+        font-size: 16px;
+        padding-top: 1rem;
     }
 
     &:hover {
         background-position: 0 100%;
+        h2 {
+           color: $dark-bg; 
+        }
     }
 }
+
+#page-dashboard-flags-col-1, #page-dashboard-flags-col-2 {
+    width: 21rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 300px;
+    margin: 0 auto;
+}
+
+// #page-dashboard-flags-col-2 {
+//     width: 20rem;
+// }
